@@ -1,0 +1,18 @@
+meta {
+  name: ver-otp
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3001/api/license/activate/verify-otp
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "uuid": "651586e2-f273-457c-8759-af845667084f",
+    "otp": "123456"
+  }
+}

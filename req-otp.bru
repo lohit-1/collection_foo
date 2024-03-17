@@ -1,0 +1,19 @@
+meta {
+  name: req-otp
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:3001/api/license/activate/request-otp
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "lohit@usebruno.com",
+    "licenseKey": "bde9ba7a-5727-4bf3-9413-f65a644295eb",
+    "deviceId": "linux-lohit"
+  }
+}

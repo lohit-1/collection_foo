@@ -1,0 +1,23 @@
+meta {
+  name: create-license
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:3001/api/license/create-license
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "lohit@usebruno.com",
+    "type": "individual"
+  }
+}
+
+script:post-response {
+  bru.setEnvVar('licenseId', res.body.licenseId);
+  bru.setEnvVar('userId', res.body.userId);
+}
